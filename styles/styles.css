@@ -1,0 +1,176 @@
+:root {
+  --header-height: 15vmin;
+  --header-min-height: 3rem;
+  --ui-text: #f7f7f7;
+  --code-text: rgb(180, 180, 180);
+  --ui-bg: #222;
+  --gap: 1vmin;
+  --linear-gradient: linear-gradient(to bottom right, rgb(250, 50, 180), rgb(255, 106, 0), rgb(238, 9, 121), rgb(100, 47, 143))
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  src: url("../fonts/NotoSansMono-VariableFont_wdth,wght.ttf");
+  font-family: "Noto Sans Mono";
+  font-style: normal;
+  font-weight: 400;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+code {
+  padding: 0.125rem;
+  border-radius: 0.25rem;
+  background-color: #111;
+  color: var(--code-text);
+  /* mix-blend-mode: multiply; */
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 15vmin;
+  font-family: "Noto Sans Mono", sans-serif;
+  height: 100vh;
+  text-align: center;
+  line-height: 1;
+  background-color: var(--ui-bg);
+  color: var(--ui-text);
+  background: var(--linear-gradient);
+}
+
+.header {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  padding: var(--gap);
+  padding-bottom: 0;
+  height: var(--header-height);
+  min-height: var(--header-min-height);
+}
+
+.header__page-title {
+  font-size: 5vmin;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--ui-bg);
+}
+
+.clock {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "hours   minutes "
+    "seconds meridiem";
+  height: calc(100vh - var(--header-height));
+  width: 100vw;
+  gap: var(--gap);
+  padding: var(--gap);
+  background-color: transparent;
+}
+
+.hours,
+.minutes,
+.seconds,
+.meridiem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--ui-bg);
+}
+
+.clock [class$="text"] {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-variation-settings: var(--font-variation);
+  transition: all 1s ease;
+  margin-bottom: 3.5vh;
+}
+
+.clock [class$="meta"] {
+  font-size: 2vmin;
+  height: 20%;
+}
+
+.hours {
+  grid-area: hours;
+}
+
+.minutes {
+  grid-area: minutes;
+}
+
+.seconds {
+  grid-area: seconds;
+}
+
+.meridiem {
+  grid-area: meridiem;
+}
+
+.font-variation {
+  font-size: 2vmin;
+  height: 20%;
+}
+
+[class$="progress"] {
+  align-self: flex-start;
+  transition: width 0.5s ease;
+  opacity: 0.85;
+  mix-blend-mode: lighten;
+  width: 100%;
+  height: var(--gap);
+  transform: scaleX(var(--scaleX));
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.hours__progress {
+  background-color: rgb(100, 47, 143);
+}
+
+.minutes__progress {
+  background-color: rgb(230, 198, 57);
+}
+
+.seconds__progress {
+  background-color: rgb(233, 71, 71);
+}
+
+.meridiem__progress {
+  background-color: rgb(71, 233, 152);
+}
+
+.font-variation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

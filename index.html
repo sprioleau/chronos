@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chronos</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="js/script.js" type="module" defer></script>
+  <script src="js/constants.js" type="module" defer></script>
+  <script src="js/utils/addLeadingZero.js" type="module" defer></script>
+  <script src="js/utils/getTimeData.js" type="module" defer></script>
+</head>
+
+<body class="app">
+  <header class="header">
+    <h1 class="header__page-title">Chronos</h1>
+  </header>
+  <div class="clock">
+    <div class="hours">
+      <div class="hours__text"></div>
+      <ul class="font-variation">
+        <li><code class="font-variation__axis">'wght'</code>: <span class="weight" data-font-variation-axis="weight"></span></li>
+        <li><code class="font-variation__axis">'wdth'</code>: <span class="width" data-font-variation-axis="width"></span></li>
+      </ul>
+      <div class="hours__progress"></div>
+    </div>
+    <div class="minutes">
+      <div class="minutes__text"></div>
+      <ul class="font-variation">
+        <li><code class="font-variation__axis">'wght'</code>: <span class="weight" data-font-variation-axis="weight"></span> </li>
+        <li><code class="font-variation__axis">'wdth'</code>: <span class="width" data-font-variation-axis="width"></span> </li>
+      </ul>
+      <div class="minutes__progress"></div>
+    </div>
+    <div class="seconds">
+      <div class="seconds__text"></div>
+      <ul class="font-variation">
+        <li><code class="font-variation__axis">'wght'</code>: <span class="weight" data-font-variation-axis="weight"></span> </li>
+        <li><code class="font-variation__axis">'wdth'</code>: <span class="width" data-font-variation-axis="width"></span> </li>
+      </ul>
+      <div class="seconds__progress"></div>
+    </div>
+    <div class="meridiem">
+      <div class="meridiem__text"></div>
+      <ul class="font-variation">
+        <li><code class="font-variation__axis">'wght'</code>: <span class="weight" data-font-variation-axis="weight"></span> </li>
+        <li><code class="font-variation__axis">'wdth'</code>: <span class="width" data-font-variation-axis="width"></span> </li>
+      </ul>
+      <div class="meridiem__progress"></div>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>
